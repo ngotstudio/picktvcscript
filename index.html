@@ -1,0 +1,1020 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Kịch bản quay brand film 58 giây cho sân pickleball mới — 55 cảnh, 3 concept FPV, lịch quay 1 ngày và bản cắt dọc 20 giây.">
+<title>Kịch Bản Sân Pickleball</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Be+Vietnam+Pro:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+
+<style>
+:root{
+  --paper:#E7ECEC; --surface:#FFFFFF; --surface-2:#F2F5F5;
+  --ink:#0B1D22; --ink-2:#33484E; --muted:#5D7278; --line:#CFD9DA; --line-2:#E1E8E8;
+  --ball:#8C9B00; --ball-hi:#C6D400;
+  --a0:#1D3036; --a1:#0F5E6B; --a2:#6A7F86; --a3:#8C9B00; --a4:#B0472A; --a5:#3B4C77;
+  --fpv:#B0472A; --fpv-soft:#F7E9E4;
+  --shadow:0 1px 2px rgba(11,29,34,.05), 0 8px 24px -14px rgba(11,29,34,.28);
+  --display:"Archivo","Helvetica Neue",Arial,sans-serif;
+  --body:"Be Vietnam Pro","Segoe UI",Roboto,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#0A1417; --surface:#101E22; --surface-2:#16262B;
+    --ink:#E8EFEE; --ink-2:#BCCBCB; --muted:#8CA1A6; --line:#22373C; --line-2:#1B2C31;
+    --ball:#C6D400; --ball-hi:#DCEA3A;
+    --a0:#9BB0B6; --a1:#3DA9B8; --a2:#8FA5AC; --a3:#C6D400; --a4:#E07A56; --a5:#8CA0D6;
+    --fpv:#E07A56; --fpv-soft:#2A1A15;
+    --shadow:0 1px 2px rgba(0,0,0,.4), 0 10px 28px -16px rgba(0,0,0,.7);
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#0A1417; --surface:#101E22; --surface-2:#16262B;
+  --ink:#E8EFEE; --ink-2:#BCCBCB; --muted:#8CA1A6; --line:#22373C; --line-2:#1B2C31;
+  --ball:#C6D400; --ball-hi:#DCEA3A;
+  --a0:#9BB0B6; --a1:#3DA9B8; --a2:#8FA5AC; --a3:#C6D400; --a4:#E07A56; --a5:#8CA0D6;
+  --fpv:#E07A56; --fpv-soft:#2A1A15;
+  --shadow:0 1px 2px rgba(0,0,0,.4), 0 10px 28px -16px rgba(0,0,0,.7);
+}
+
+*{box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:15px;line-height:1.6;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1080px;margin:0 auto;padding-inline:20px;padding-block:0 72px}
+h1,h2,h3,h4{font-family:var(--display);text-wrap:balance;margin:0}
+p{margin:0}
+a{color:inherit}
+.mono{font-family:var(--mono);font-variant-numeric:tabular-nums}
+
+/* ---------- header ---------- */
+header.top{padding-block:44px 26px;border-bottom:2px solid var(--ink)}
+.eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);display:flex;flex-wrap:wrap;gap:6px 14px}
+h1{font-size:clamp(34px,7vw,60px);font-weight:800;letter-spacing:-.025em;line-height:1.02;margin-top:14px}
+h1 .thin{font-weight:500;color:var(--muted)}
+.lede{margin-top:14px;max-width:60ch;color:var(--ink-2);font-size:16px}
+.specs{margin-top:26px;display:flex;flex-wrap:wrap;gap:0;border:1px solid var(--line);border-radius:3px;overflow:hidden;background:var(--surface)}
+.spec{flex:1 1 130px;padding:12px 14px;border-right:1px solid var(--line-2)}
+.spec:last-child{border-right:0}
+.spec dt{font-family:var(--mono);font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:var(--muted)}
+.spec dd{margin:3px 0 0;font-family:var(--display);font-weight:700;font-size:17px;letter-spacing:-.01em}
+
+/* ---------- tabs ---------- */
+nav.tabs{position:sticky;top:0;z-index:20;background:var(--paper);border-bottom:1px solid var(--line);margin-top:0;display:flex;gap:2px;overflow-x:auto;scrollbar-width:thin}
+nav.tabs button{appearance:none;background:none;border:0;border-bottom:2px solid transparent;color:var(--muted);font-family:var(--display);font-weight:600;font-size:13.5px;letter-spacing:.01em;padding:14px 13px;cursor:pointer;white-space:nowrap;margin-bottom:-1px}
+nav.tabs button:hover{color:var(--ink)}
+nav.tabs button[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--ink)}
+nav.tabs button:focus-visible{outline:2px solid var(--ball);outline-offset:-3px}
+.panel[hidden]{display:none}
+.panel{padding-top:30px}
+
+/* ---------- generic blocks ---------- */
+h2.sec{font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-family:var(--mono);margin-bottom:12px}
+h3.blk{font-size:22px;font-weight:700;letter-spacing:-.015em}
+.note{background:var(--surface);border:1px solid var(--line);border-left:3px solid var(--ball);border-radius:3px;padding:16px 18px;font-size:14.5px;color:var(--ink-2)}
+.note strong{color:var(--ink)}
+.stack{display:flex;flex-direction:column;gap:14px}
+.stack-lg{display:flex;flex-direction:column;gap:34px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:760px){.two{grid-template-columns:1fr}}
+
+/* ---------- progress ---------- */
+.progbar{display:flex;align-items:center;gap:14px;background:var(--surface);border:1px solid var(--line);border-radius:3px;padding:12px 16px;margin-bottom:22px;flex-wrap:wrap}
+.progbar .count{font-family:var(--display);font-weight:800;font-size:19px;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.track{flex:1 1 160px;height:6px;background:var(--line-2);border-radius:99px;overflow:hidden;min-width:120px}
+.track i{display:block;height:100%;width:0;background:var(--ball);transition:width .25s ease}
+.progbar .hint{font-size:12px;color:var(--muted)}
+.togv{margin-left:auto;display:flex;align-items:center;gap:8px;font-size:13px;color:var(--ink-2);cursor:pointer;user-select:none}
+.togv input{accent-color:var(--ball);width:15px;height:15px}
+
+/* ---------- acts ---------- */
+.act{margin-bottom:30px}
+.act-head{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;padding:10px 0 10px 14px;border-left:4px solid var(--ac);position:relative}
+.act-num{font-family:var(--mono);font-size:11px;letter-spacing:.14em;color:var(--ac);font-weight:600;text-transform:uppercase}
+.act-name{font-family:var(--display);font-weight:800;font-size:21px;letter-spacing:-.02em}
+.act-tc{font-family:var(--mono);font-size:12.5px;color:var(--muted);font-variant-numeric:tabular-nums}
+.act-role{flex-basis:100%;font-size:13.5px;color:var(--muted);margin-top:2px}
+.act-role b{color:var(--ac);font-weight:600}
+
+/* ---------- shot rows ---------- */
+.shots{display:flex;flex-direction:column;gap:1px;background:var(--line-2);border:1px solid var(--line-2);border-radius:3px;overflow:hidden;margin-top:10px}
+.shot{background:var(--surface);display:grid;grid-template-columns:34px 78px 1fr;gap:0 14px;padding:13px 15px;align-items:start}
+.shot.done{background:var(--surface-2)}
+.shot.done .s-desc{color:var(--muted);text-decoration:line-through;text-decoration-color:var(--line)}
+.s-check{display:flex;align-items:center;justify-content:center;padding-top:1px}
+.s-check input{width:17px;height:17px;accent-color:var(--ball);cursor:pointer}
+.s-check input:focus-visible{outline:2px solid var(--ball);outline-offset:2px}
+.s-tc{font-family:var(--mono);font-size:12.5px;font-variant-numeric:tabular-nums;line-height:1.5;padding-top:2px}
+.s-tc b{display:block;font-weight:600;color:var(--ink)}
+.s-tc span{color:var(--muted);font-size:11px}
+.s-main{min-width:0}
+.s-id{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;color:var(--muted);font-weight:600}
+.s-desc{font-size:14.5px;line-height:1.55;margin-top:2px}
+.s-desc b{font-weight:600}
+.chips{display:flex;flex-wrap:wrap;gap:5px;margin-top:8px}
+.chip{font-family:var(--mono);font-size:10.5px;letter-spacing:.04em;padding:3px 7px;border:1px solid var(--line);border-radius:2px;color:var(--muted);background:var(--surface-2);white-space:nowrap}
+.chip.k{color:var(--ink-2);border-color:var(--line)}
+.chip.sfx{border-color:var(--ball);color:var(--ball);background:transparent}
+.chip.vert{border-color:var(--a5);color:var(--a5);background:transparent;font-weight:600}
+.chip.fpv{border-color:var(--fpv);color:var(--fpv);background:transparent;font-weight:600}
+.chip.hero{border-color:var(--ball);background:var(--ball);color:#0B1D22;font-weight:600}
+:root[data-theme="dark"] .chip.hero{color:#0A1417}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .chip.hero{color:#0A1417}}
+.sublist{margin:9px 0 0;padding:10px 12px;background:var(--surface-2);border:1px dashed var(--line);border-radius:3px;font-size:13px;color:var(--ink-2);display:grid;grid-template-columns:1fr 1fr;gap:3px 16px}
+.sublist span{font-family:var(--mono);font-size:11.5px}
+@media(max-width:620px){
+  .shot{grid-template-columns:28px 1fr;gap:0 10px}
+  .s-tc{grid-column:2;order:-1;display:flex;gap:8px;align-items:baseline;padding-top:0}
+  .s-tc span{font-size:11px}
+  .s-main{grid-column:2}
+  .sublist{grid-template-columns:1fr}
+}
+
+/* ---------- fpv cards ---------- */
+.fpv-card{background:var(--surface);border:1px solid var(--line);border-top:3px solid var(--fpv);border-radius:3px;padding:20px 22px}
+.fpv-card.prime{border-color:var(--fpv);box-shadow:var(--shadow)}
+.fpv-title{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.fpv-title .n{font-family:var(--mono);font-size:11px;letter-spacing:.14em;color:var(--fpv);font-weight:600}
+.fpv-title h4{font-family:var(--display);font-weight:800;font-size:20px;letter-spacing:-.02em}
+.fpv-meta{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.fpv-body{margin-top:14px;font-size:14.5px;color:var(--ink-2)}
+.fpv-body p+p{margin-top:9px}
+.pathline{margin-top:12px;padding:12px 14px;background:var(--fpv-soft);border-radius:3px;font-size:14px;line-height:1.7}
+.pathline b{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--fpv);display:block;margin-bottom:4px}
+
+/* ---------- tables ---------- */
+.tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:3px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;min-width:560px;font-size:14px}
+th,td{text-align:left;padding:10px 14px;border-bottom:1px solid var(--line-2);vertical-align:top}
+th{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:600;background:var(--surface-2)}
+tr:last-child td{border-bottom:0}
+td.tc{font-family:var(--mono);font-variant-numeric:tabular-nums;white-space:nowrap;color:var(--ink-2)}
+
+/* ---------- checklist ---------- */
+.checklist{background:var(--surface);border:1px solid var(--line);border-radius:3px;padding:6px 0}
+.checklist li{list-style:none;padding:9px 18px;border-bottom:1px solid var(--line-2);font-size:14.5px;display:flex;gap:11px}
+.checklist li:last-child{border-bottom:0}
+.checklist li::before{content:"";flex:0 0 7px;height:7px;margin-top:8px;background:var(--ball);border-radius:1px}
+.checklist{margin:0;padding-inline:0}
+.checklist b{font-weight:600}
+
+/* ---------- schedule ---------- */
+.sched{display:flex;flex-direction:column;gap:1px;background:var(--line-2);border:1px solid var(--line-2);border-radius:3px;overflow:hidden}
+.slot{background:var(--surface);display:grid;grid-template-columns:118px 1fr;gap:16px;padding:13px 16px}
+.slot.key{background:var(--fpv-soft)}
+.slot .t{font-family:var(--mono);font-size:12.5px;font-weight:600;font-variant-numeric:tabular-nums;color:var(--ink)}
+.slot .b strong{font-family:var(--display);font-weight:700;font-size:15.5px;letter-spacing:-.01em;display:block}
+.slot .b span{font-size:13.5px;color:var(--muted)}
+@media(max-width:620px){.slot{grid-template-columns:1fr;gap:4px}}
+
+/* ---------- fill-in ---------- */
+.fill{background:var(--surface);border:1px dashed var(--ball);border-radius:3px;padding:18px 20px}
+.fill h4{font-family:var(--display);font-size:16px;font-weight:700;letter-spacing:-.01em;margin-bottom:10px}
+.fill ul{margin:0;padding-left:18px;font-size:14.5px;color:var(--ink-2)}
+.fill li{margin-bottom:4px}
+.fill code{font-family:var(--mono);font-size:12.5px;background:var(--surface-2);padding:1px 5px;border-radius:2px;color:var(--ink)}
+
+footer{margin-top:56px;padding-top:20px;border-top:1px solid var(--line);font-size:12.5px;color:var(--muted);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+@media (prefers-reduced-motion: reduce){*{transition:none!important;animation:none!important}}
+</style>
+<style>
+html{color-scheme:light dark}
+body{margin:0}
+img{max-width:100%}
+[hidden]{display:none!important}
+</style>
+</head>
+<body>
+
+
+<div class="wrap">
+
+<header class="top">
+  <div class="eyebrow">
+    <span>Kịch bản quay · bản 1.0</span><span>Sân pickleball [TÊN SÂN]</span><span>Tài liệu làm việc với team media</span>
+  </div>
+  <h1>Sân mới,<br><span class="thin">58 giây.</span></h1>
+  <p class="lede">Brand film giới thiệu sân pickleball, dựng theo cấu trúc build-up → nốt lặng → drop. Trọng tâm là <b>bán chất lượng sân và quy mô khu</b>; trận đấu chỉ là chất liệu để khoe sân. Ba cú FPV được viết riêng để thuê pilot trong một buổi.</p>
+  <dl class="specs">
+    <div class="spec"><dt>Thời lượng</dt><dd>58 giây</dd></div>
+    <div class="spec"><dt>Khung hình</dt><dd>2.39:1</dd></div>
+    <div class="spec"><dt>Số cảnh</dt><dd>55</dd></div>
+    <div class="spec"><dt>Cảnh FPV</dt><dd>3 concept</dd></div>
+    <div class="spec"><dt>Bản phụ</dt><dd>Dọc 20s</dd></div>
+    <div class="spec"><dt>Ngày quay</dt><dd>1 ngày</dd></div>
+  </dl>
+</header>
+
+<nav class="tabs" role="tablist" aria-label="Các phần của kịch bản">
+  <button role="tab" aria-selected="true" aria-controls="p-timeline" id="t-timeline">Timeline dựng</button>
+  <button role="tab" aria-selected="false" aria-controls="p-fpv" id="t-fpv">Brief FPV</button>
+  <button role="tab" aria-selected="false" aria-controls="p-audio" id="t-audio">Âm thanh &amp; nhạc</button>
+  <button role="tab" aria-selected="false" aria-controls="p-vert" id="t-vert">Bản dọc 20s</button>
+  <button role="tab" aria-selected="false" aria-controls="p-sched" id="t-sched">Lịch quay</button>
+  <button role="tab" aria-selected="false" aria-controls="p-prep" id="t-prep">Chuẩn bị</button>
+  <button role="tab" aria-selected="false" aria-controls="p-notes" id="t-notes">Kỹ thuật &amp; lưu ý</button>
+</nav>
+
+<!-- ================= TIMELINE ================= -->
+<section class="panel" id="p-timeline" role="tabpanel" aria-labelledby="t-timeline">
+
+  <div class="progbar">
+    <span class="count"><span id="pdone">0</span>/55</span>
+    <div class="track"><i id="pfill"></i></div>
+    <span class="hint">Tick khi đã quay xong — lưu trên máy này</span>
+    <label class="togv"><input type="checkbox" id="onlyvert"> Chỉ hiện cảnh dùng cho bản dọc</label>
+  </div>
+
+  <!-- HỒI 0 -->
+  <div class="act" style="--ac:var(--a0)">
+    <div class="act-head">
+      <span class="act-num">Hồi 0</span>
+      <span class="act-name">Cú mở</span>
+      <span class="act-tc">00:00 → 00:03 · 3s</span>
+      <span class="act-role">Bán <b>âm thanh signature</b> trước khi bán hình. Nhạc: một cú impact đơn rồi im.</span>
+    </div>
+    <div class="shots">
+
+      <div class="shot" data-vert="1"><div class="s-check"><input type="checkbox" data-shot="1" aria-label="Cảnh 1"></div>
+        <div class="s-tc"><b>00:00.0</b><span>0.6s</span></div>
+        <div class="s-main"><div class="s-id">CẢNH 01</div>
+          <p class="s-desc">Màn <b>đen tuyệt đối</b>. Không hình. Chỉ một tiếng <b>"PỐC"</b> của bóng chạm mặt paddle, đuôi reverb dài.</p>
+          <div class="chips"><span class="chip sfx">SFX signature</span><span class="chip vert">Bản dọc</span></div></div></div>
+
+      <div class="shot" data-vert="1"><div class="s-check"><input type="checkbox" data-shot="2" aria-label="Cảnh 2"></div>
+        <div class="s-tc"><b>00:00.6</b><span>0.7s</span></div>
+        <div class="s-main"><div class="s-id">CẢNH 02</div>
+          <p class="s-desc">ECU bóng pickleball nằm im trên mặt sân mới. Thấy rõ <b>lỗ bóng</b> và hạt nhám mặt sân.</p>
+          <div class="chips"><span class="chip k">100mm macro</span><span class="chip k">Dolly-in 5cm</span><span class="chip k">50 fps</span><span class="chip vert">Bản dọc</span></div></div></div>
+
+      <div class="shot"><div class="s-check"><input type="checkbox" data-shot="3" aria-label="Cảnh 3"></div>
+        <div class="s-tc"><b>00:01.3</b><span>1.7s</span></div>
+        <div class="s-main"><div class="s-id">CẢNH 03</div>
+          <p class="s-desc">WIDE hero sân trong nhà còn trống. <b>Đèn LED bật lần lượt từ trái sang phải.</b> Title mờ hiện giữa khung: tên sân, chữ nhỏ, letter-spacing rộng.</p>
+          <div class="chips"><span class="chip k">16–24mm, đặt sát mặt sân</span><span class="chip k">Tĩnh</span><span class="chip k">25 fps</span><span class="chip sfx">Tiếng công tắc ×3 + rumble</span></div></div></div>
+    </div>
+  </div>
+
+  <!-- HỒI 1 -->
+  <div class="act" style="--ac:var(--a1)">
+    <div class="act-head">
+      <span class="act-num">Hồi 1</span>
+      <span class="act-name">Sân</span>
+      <span class="act-tc">00:03 → 00:13 · 10s</span>
+      <span class="act-role">Đây là <b>đoạn bán hàng thật sự</b> — mặt sân, lưới, đèn, tiện ích. Chưa có mặt người. Nhạc thưa, để tiếng thật nổi lên.</span>
+    </div>
+    <div class="shots">
+
+      <div class="shot" data-vert="1"><div class="s-check"><input type="checkbox" data-shot="4" aria-label="Cảnh 4"></div>
+        <div class="s-tc"><b>00:03.0</b><span>0.4s</span></div>
+        <div class="s-main"><div class="s-id">CẢNH 04</div>
+          <p class="s-desc">Macro <b>vạch trắng sắc lẹm</b> cắt ngang mặt sân. Không mẻ, không lem — đây là bằng chứng "sân mới".</p>
+          <div class="chips"><span class="chip k">100mm macro</span><span class="chip k">Trượt dọc theo vạch</span><span class="chip k">100 fps</span><span class="chip vert">Bản dọc</span></div></div></div>
+
+      <div class="shot" data-vert="1"><div class="s-check"><input type="checkbox" data-shot="5" aria-label="Cảnh 5"></div>
+        <div class="s-tc"><b>00:03.4</b><span>0.4s</span></div>
+        <div class="s-main"><div class="s-id">CẢNH 05</div>
+          <p class="s-desc">Macro texture mặt sân, đầu ngón tay lướt qua bề mặt nhám.</p>
+          <div class="chips"><span class="chip k">100mm macro</span><span class="chip k">Tĩnh</span><span class="chip k">100 fps</span><span class="chip sfx">Tiếng sạn</span><span class="chip vert">Bản dọc</span></div></div></div>
+
+      <div class="shot"><div class="s-check"><input type="checkbox" data-shot="6" aria-label="Cảnh 6"></div>
+        <div class="s-tc"><b>00:03.8</b><span>0.5s</span></div>
+        <div class="s-main"><div class="s-id">CẢNH 06</div>
+          <p class="s-desc">CU lưới căng, viền trắng, khoá tăng đơ. Tilt từ chân cột lên mép lưới.</p>
+          <div class="chips"><span class="chip k">50mm</span><span class="chip k">Tilt lên</span><span class="chip k">50 fps</span><span class="chip sfx">Dây lưới rung</span></div></div></div>
+
+      <div class="shot" data-vert="1"><div class="s-check"><input type="checkbox" data-shot="7" aria-label="Cảnh 7"></div>
+        <div class="s-tc"><b>00:04.3</b><span>0.5s</span></div>
+        <div class="s-main"><div class="s-id">CẢNH 07</div>
+          <p class="s-desc">CU đèn pha LED bật sáng — flare cắt ngang khung. Đổi nét từ mờ sang rõ ngay lúc đèn lên.</p>
+          <div class="chips"><span class="chip k">35mm</span><span class="chip k">Rack focus</span><span class="chip k">25 fps</span><span class="chip sfx">Đèn nổ + hum</span><span class="chip vert">Bản dọc</span></div></div></div>
+
+      <div class="shot"><div class="s-check"><input type="checkbox" data-shot="8" aria-label="Cảnh 8"></div>
+        <div class="s-tc"><b>00:04.8</b><span>0.6s</span></div>
+        <div class="s-main"><div class="s-id">CẢNH 08</div>
+          <p class="s-desc">LOW-ANGLE sân <b>ngoài trời</b>, ngược nắng hoàng hôn, lưới thành bóng đen cắt ngang mặt trời.</p>
+          <div class="chips"><span class="chip k">24mm sát đất</span><span class="chip k">Tĩnh</span><span class="chip k">50 fps</span><span class="chip k">Giờ vàng</span></div></div></div>
+
+      <div class="shot"><div class="s-check"><input type="checkbox" data-shot="9" aria-label="Cảnh 9"></div>
+        <div class="s-tc"><b>00:05.4</b><span>0.6s</span></div>
+        <div class="s-main"><div class="s-id">CẢNH 09</div>
+          <p class="s-desc">CU tay rút paddle khỏi túi. Paddle <b>còn nguyên lớp film bảo vệ</b>.</p>
+          <div class="chips"><span class="chip k">50mm</span><span class="chip k">Handheld nhẹ</span><span class="chip k">50 fps</span><span class="chip sfx">Khoá kéo</span></div></div></div>
+
+      <div class="shot" data-vert="1"><div class="s-check"><input type="checkbox" data-shot="10" aria-label="Cảnh 10"></div>
+        <div class="s-tc"><b>00:06.0</b><span>0.6s</span></div>
+        <div class="s-main"><div class="s-id">CẢNH 10</div>
+          <p class="s-desc">ECU ngón tay <b>bóc lớp film</b> khỏi mặt paddle. Tiếng bóc film là một trong những SFX ngon nhất của video.</p>
+          <div class="chips"><span class="chip k">100mm macro</span><span class="chip k">Tĩnh</span><span class="chip k">100 fps</span><span class="chip sfx">Bóc film</span><span class="chip vert">Bản dọc</span></div></div></div>
+
+      <div class="shot" data-vert="1"><div class="s-check"><input type="checkbox" data-shot="11" aria-label="Cảnh 11"></div>
+        <div class="s-tc"><b>00:06.6</b><span>0.7s</span></div>
+        <div class="s-main"><div class="s-id">CẢNH 11</div>
+          <p class="s-desc">TOP-DOWN: 4 paddle xếp hình quạt + 1 bóng, đặt trên mặt sân mới. Xoay chậm 15°.</p>
+          <div class="chips"><span class="chip k">35mm treo cao / drone Mini</span><span class="chip k">Xoay chậm</span><span class="chip k">25 fps</span><span class="chip vert">Bản dọc</span></div></div></div>
+
+      <div class="shot"><div class="s-check"><input type="checkbox" data-shot="12" aria-label="Cảnh 12"></div>
+        <div class="s-tc"><b>00:07.3</b><span>0.9s</span></div>
+        <div class="s-main"><div class="s-id">CẢNH 12</div>
+          <p class="s-desc">Slider ngang qua <b>khu tiện ích</b>: ghế ngồi, kệ nước, tủ để đồ, biển chỉ dẫn. Một cảnh này gánh cả phần "đi chơi ở đây thoải mái".</p>
+          <div class="chips"><span class="chip k">35mm</span><span class="chip k">Slider 1m trái→phải</span><span class="chip k">25 fps</span></div></div></div>
+
+      <div class="shot"><div class="s-check"><input type="checkbox" data-shot="13" aria-label="Cảnh 13"></div>
+        <div class="s-tc"><b>00:08.2</b><span>0.7s</span></div>
+        <div class="s-main"><div class="s-id">CẢNH 13</div>
+          <p class="s-desc">CU biển tên sân / bảng số sân. Chữ phải sắc, sạch, không bụi.</p>
+          <div class="chips"><span class="chip k">85mm</span><span class="chip k">Rack focus</span><span class="chip k">25 fps</span></div></div></div>
+
+      <div class="shot"><div class="s-check"><input type="checkbox" data-shot="14" aria-label="Cảnh 14"></div>
+        <div class="s-tc"><b>00:08.9</b><span>1.0s</span></div>
+        <div class="s-main"><div class="s-id">CẢNH 14 · CHUỖI BẮN LIÊN THANH</div>
+          <p class="s-desc"><b>8 cảnh × 0.12 giây</b> (3 frame mỗi cảnh), cắt đúng 8 nhịp gõ của nhạc. Mỗi cảnh chỉ cần 2 giây thô. Máy cố định, ánh sáng thống nhất, quay hết trong một lượt dựng máy.</p>
+          <div class="sublist">
+            <span>14a — Giày xỏ vào chân</span><span>14e — Khăn vắt lên vai</span>
+            <span>14b — Tay siết dây giày</span><span>14f — Paddle vỗ vào lòng bàn tay</span>
+            <span>14c — Thẻ/QR quẹt cửa vào sân</span><span>14g — Bóng nảy một nhịp trên paddle</span>
+            <span>14d — Nước rót vào bình</span><span>14h — Mắt ngước lên nhìn sân</span>
+          </div>
+          <div class="chips"><span class="chip k">Mix 50/85mm</span><span class="chip k">50 fps toàn bộ</span><span class="chip sfx">8 nhịp gõ</span></div></div></div>
+
+      <div class="shot"><div class="s-check"><input type="checkbox" data-shot="15" aria-label="Cảnh 15"></div>
+        <div class="s-tc"><b>00:09.9</b><span>1.6s</span></div>
+        <div class="s-main"><div class="s-id">CẢNH 15</div>
+          <p class="s-desc">WIDE cửa sân mở, 4 người bước vào <b>ngược sáng</b>, bóng đổ dài trên mặt sân.</p>
+          <div class="chips"><span class="chip k">24mm đặt thấp</span><span class="chip k">Tĩnh</span><span class="chip k">50 fps</span><span class="chip sfx">Cửa + bước chân</span></div></div></div>
+
+      <div class="shot"><div class="s-check"><input type="checkbox" data-shot="16" aria-label="Cảnh 16"></div>
+        <div class="s-tc"><b>00:11.5</b><span>1.5s</span></div>
+        <div class="s-main"><div class="s-id">CẢNH 16</div>
+          <p class="s-desc"><b>TOP-DOWN drone Mini</b>: sân trống nhìn thẳng đứng xuống, 4 người bước vào chiếm 4 vị trí. Cú đảo tỷ lệ đầu tiên của video.</p>
+          <div class="chips"><span class="chip hero">Cảnh dấu ấn</span><span class="chip k">Drone Mini/Air</span><span class="chip k">Hover + drift lên</span><span class="chip k">25 fps</span></div></div></div>
+    </div>
+  </div>
+
+  <!-- HỒI 2 -->
+  <div class="act" style="--ac:var(--a2)">
+    <div class="act-head">
+      <span class="act-num">Hồi 2</span>
+      <span class="act-name">Nốt lặng</span>
+      <span class="act-tc">00:13 → 00:18.4 · 5.4s</span>
+      <span class="act-role"><b>Nhạc tụt xuống còn ~20%.</b> Đây là 5 giây trống rỗng có chủ đích — không có nó thì cú drop ở 00:18.4 không nổ. Đừng để editor cắt mất đoạn này.</span>
+    </div>
+    <div class="shots">
+
+      <div class="shot"><div class="s-check"><input type="checkbox" data-shot="17" aria-label="Cảnh 17"></div>
+        <div class="s-tc"><b>00:13.0</b><span>1.2s</span></div>
+        <div class="s-main"><div class="s-id">CẢNH 17</div>
+          <p class="s-desc">ECU bàn tay siết cán paddle, thấy gân tay.</p>
+          <div class="chips"><span class="chip k">100mm</span><span class="chip k">Tĩnh</span><span class="chip k">50 fps</span><span class="chip sfx">Siết grip + thở</span></div></div></div>
+
+      <div class="shot"><div class="s-check"><input type="checkbox" data-shot="18" aria-label="Cảnh 18"></div>
+        <div class="s-tc"><b>00:14.2</b><span>1.0s</span></div>
+        <div class="s-main"><div class="s-id">CẢNH 18</div>
+          <p class="s-desc">CU mặt người chơi, mắt nhìn qua lưới. <b>Không cười.</b> Đây là cảnh duy nhất trong video được phép nghiêm.</p>
+          <div class="chips"><span class="chip k">85mm f/1.8</span><span class="chip k">Tĩnh</span><span class="chip k">50 fps</span></div></div></div>
+
+      <div class="shot"><div class="s-check"><input type="checkbox" data-shot="19" aria-label="Cảnh 19"></div>
+        <div class="s-tc"><b>00:15.2</b><span>1.2s</span></div>
+        <div class="s-main"><div class="s-id">CẢNH 19</div>
+          <p class="s-desc">ECU bóng đặt xuống mặt sân, lăn nửa vòng rồi đứng im.</p>
+          <div class="chips"><span class="chip k">100mm macro sát đất</span><span class="chip k">Tĩnh</span><span class="chip k">120 fps</span><span class="chip sfx">Bóng lăn + reverb</span></div></div></div>
+
+      <div class="shot"><div class="s-check"><input type="checkbox" data-shot="20" aria-label="Cảnh 20"></div>
+        <div class="s-tc"><b>00:16.4</b><span>1.2s</span></div>
+        <div class="s-main"><div class="s-id">CẢNH 20</div>
+          <p class="s-desc">LOW-ANGLE ngửa: người giao bóng chuẩn bị, đèn trần sau lưng thành vành sáng quanh đầu.</p>
+          <div class="chips"><span class="chip hero">Cảnh dấu ấn</span><span class="chip k">24mm sát đất</span><span class="chip k">Tĩnh</span><span class="chip k">50 fps</span></div></div></div>
+
+      <div class="shot"><div class="s-check"><input type="checkbox" data-shot="21" aria-label="Cảnh 21"></div>
+        <div class="s-tc"><b>00:17.6</b><span>0.8s</span></div>
+        <div class="s-main"><div class="s-id">CẢNH 21</div>
+          <p class="s-desc">ECU bóng tung lên vượt khỏi mép trên khung hình. <b>Cắt đúng phách drop</b> — frame cuối là frame bóng biến mất.</p>
+          <div class="chips"><span class="chip k">85mm</span><span class="chip k">Tilt theo bóng</span><span class="chip k">120 fps</span><span class="chip sfx">Rumble dâng cực đại</span></div></div></div>
+    </div>
+  </div>
+
+  <!-- HỒI 3 -->
+  <div class="act" style="--ac:var(--a3)">
+    <div class="act-head">
+      <span class="act-num">Hồi 3</span>
+      <span class="act-name">Chơi</span>
+      <span class="act-tc">00:18.4 → 00:46 · 27.6s</span>
+      <span class="act-role"><b>Drop.</b> Nhịp cắt nhanh dần: ~1.2s ở đầu đoạn, xuống ~0.6s ở cuối. Ba cú FPV nằm ở đây. Ngày chuyển sang đêm ở 00:32.3.</span>
+    </div>
+    <div class="shots">
+
+      <div class="shot" data-vert="1"><div class="s-check"><input type="checkbox" data-shot="22" aria-label="Cảnh 22"></div>
+        <div class="s-tc"><b>00:18.4</b><span>0.5s</span></div>
+        <div class="s-main"><div class="s-id">CẢNH 22</div>
+          <p class="s-desc">Cú giao bóng, toàn thân, slow-mo. <b>Tiếng PỐC to nhất video</b> rơi đúng frame paddle chạm bóng.</p>
+          <div class="chips"><span class="chip k">50mm</span><span class="chip k">Tĩnh</span><span class="chip k">120 fps</span><span class="chip sfx">PỐC + drop nhạc</span><span class="chip vert">Bản dọc</span></div></div></div>
+
+      <div class="shot"><div class="s-check"><input type="checkbox" data-shot="23" aria-label="Cảnh 23"></div>
+        <div class="s-tc"><b>00:18.9</b><span>0.9s</span></div>
+        <div class="s-main"><div class="s-id">CẢNH 23</div>
+          <p class="s-desc">Lướt sát mặt sân từ vạch cuối, cao khoảng 30cm, lao thẳng về phía lưới.</p>
+          <div class="chips"><span class="chip fpv">FPV #1a</span><span class="chip k">Cinewhoop</span><span class="chip k">One-take</span><span class="chip sfx">Whoosh</span></div></div></div>
+
+      <div class="shot"><div class="s-check"><input type="checkbox" data-shot="24" aria-label="Cảnh 24"></div>
+        <div class="s-tc"><b>00:19.8</b><span>0.8s</span></div>
+        <div class="s-main"><div class="s-id">CẢNH 24</div>
+          <p class="s-desc">Chui dưới lưới, vọt lên 3m, lộ ra cả hai người chơi. Nối liền cảnh 23, cùng một take.</p>
+          <div class="chips"><span class="chip fpv">FPV #1b</span><span class="chip k">Cinewhoop</span><span class="chip sfx">Whoosh</span></div></div></div>
+
+      <div class="shot"><div class="s-check"><input type="checkbox" data-shot="25" aria-label="Cảnh 25"></div>
+        <div class="s-tc"><b>00:20.6</b><span>0.6s</span></div>
+        <div class="s-main"><div class="s-id">CẢNH 25</div>
+          <p class="s-desc">CU chân di chuyển ngang sát <b>vạch kitchen</b>, giày rít trên mặt sân.</p>
+          <div class="chips"><span class="chip k">50mm sát đất</span><span class="chip k">Pan theo</span><span class="chip k">100 fps</span><span class="chip sfx">Giày rít</span></div></div></div>
+
+      <div class="shot" data-vert="1"><div class="s-check"><input type="checkbox" data-shot="26" aria-label="Cảnh 26"></div>
+        <div class="s-tc"><b>00:21.2</b><span>0.5s</span></div>
+        <div class="s-main"><div class="s-id">CẢNH 26 · SIGNATURE SHOT</div>
+          <p class="s-desc"><b>Nhìn xuyên lỗ bóng pickleball.</b> Cầm quả bóng sát ống kính, lấy nét qua một lỗ tròn, thấy người chơi đang đánh phía sau. Không tốn đồng nào, và là cảnh không ai copy được vì nó chỉ có ở môn này.</p>
+          <div class="chips"><span class="chip hero">Cảnh dấu ấn</span><span class="chip k">35mm + bóng làm foreground</span><span class="chip k">Tĩnh</span><span class="chip k">25 fps</span><span class="chip vert">Bản dọc</span></div></div></div>
+
+      <div class="shot"><div class="s-check"><input type="checkbox" data-shot="27" aria-label="Cảnh 27"></div>
+        <div class="s-tc"><b>00:21.7</b><span>0.7s</span></div>
+        <div class="s-main"><div class="s-id">CẢNH 27</div>
+          <p class="s-desc">Cú dink ở kitchen, cận paddle chạm bóng, tay mềm.</p>
+          <div class="chips"><span class="chip k">85mm</span><span class="chip k">Tĩnh</span><span class="chip k">120 fps</span><span class="chip sfx">PỐC nhỏ, mềm</span></div></div></div>
+
+      <div class="shot"><div class="s-check"><input type="checkbox" data-shot="28" aria-label="Cảnh 28"></div>
+        <div class="s-tc"><b>00:22.4</b><span>0.6s</span></div>
+        <div class="s-main"><div class="s-id">CẢNH 28</div>
+          <p class="s-desc">CU mặt đối thủ phản xạ, mắt bám bóng.</p>
+          <div class="chips"><span class="chip k">85mm</span><span class="chip k">Tĩnh</span><span class="chip k">50 fps</span></div></div></div>
+
+      <div class="shot" data-vert="1"><div class="s-check"><input type="checkbox" data-shot="29" aria-label="Cảnh 29"></div>
+        <div class="s-tc"><b>00:23.0</b><span>0.9s</span></div>
+        <div class="s-main"><div class="s-id">CẢNH 29</div>
+          <p class="s-desc">Cú smash. LOW-ANGLE ngửa, người bật khỏi mặt sân, đèn trần sau lưng. <b>Đây là frame dùng làm thumbnail và hook bản dọc.</b></p>
+          <div class="chips"><span class="chip hero">Cảnh dấu ấn</span><span class="chip k">24mm sát đất</span><span class="chip k">Tĩnh</span><span class="chip k">120 fps</span><span class="chip sfx">PỐC mạnh + impact</span><span class="chip vert">Bản dọc</span></div></div></div>
+
+      <div class="shot"><div class="s-check"><input type="checkbox" data-shot="30" aria-label="Cảnh 30"></div>
+        <div class="s-tc"><b>00:23.9</b><span>0.7s</span></div>
+        <div class="s-main"><div class="s-id">CẢNH 30</div>
+          <p class="s-desc">TOP-DOWN drone Mini: pha bóng qua lại nhìn thẳng xuống, 4 người, bóng nhỏ xíu giữa sân.</p>
+          <div class="chips"><span class="chip k">Drone Mini</span><span class="chip k">Hover</span><span class="chip k">25 fps</span></div></div></div>
+
+      <div class="shot"><div class="s-check"><input type="checkbox" data-shot="31" aria-label="Cảnh 31"></div>
+        <div class="s-tc"><b>00:24.6</b><span>1.2s</span></div>
+        <div class="s-main"><div class="s-id">CẢNH 31</div>
+          <p class="s-desc">WIDE <b>sân ngoài trời</b> giờ vàng, 4 người chơi đôi, ngược sáng, nắng xiên qua khung hình.</p>
+          <div class="chips"><span class="chip k">35mm</span><span class="chip k">Tĩnh</span><span class="chip k">50 fps</span><span class="chip k">Giờ vàng</span></div></div></div>
+
+      <div class="shot" data-vert="1"><div class="s-check"><input type="checkbox" data-shot="32" aria-label="Cảnh 32"></div>
+        <div class="s-tc"><b>00:25.8</b><span>0.6s</span></div>
+        <div class="s-main"><div class="s-id">CẢNH 32</div>
+          <p class="s-desc">CU đập tay đồng đội sau khi ăn điểm.</p>
+          <div class="chips"><span class="chip k">50mm</span><span class="chip k">Handheld</span><span class="chip k">100 fps</span><span class="chip sfx">Đập tay</span><span class="chip vert">Bản dọc</span></div></div></div>
+
+      <div class="shot" data-vert="1"><div class="s-check"><input type="checkbox" data-shot="33" aria-label="Cảnh 33"></div>
+        <div class="s-tc"><b>00:26.4</b><span>0.6s</span></div>
+        <div class="s-main"><div class="s-id">CẢNH 33</div>
+          <p class="s-desc">CU nụ cười người chơi nữ, tóc bay. Đây là cảnh làm mềm toàn bộ video — bắt buộc phải có.</p>
+          <div class="chips"><span class="chip k">85mm</span><span class="chip k">Tĩnh</span><span class="chip k">50 fps</span><span class="chip sfx">Cười</span><span class="chip vert">Bản dọc</span></div></div></div>
+
+      <div class="shot"><div class="s-check"><input type="checkbox" data-shot="34" aria-label="Cảnh 34"></div>
+        <div class="s-tc"><b>00:27.0</b><span>1.4s</span></div>
+        <div class="s-main"><div class="s-id">CẢNH 34</div>
+          <p class="s-desc">Bám sau lưng người chơi khi họ di chuyển ngang sân.</p>
+          <div class="chips"><span class="chip fpv">FPV #2a</span><span class="chip k">Cinewhoop</span><span class="chip k">One-take</span><span class="chip sfx">Whoosh</span></div></div></div>
+
+      <div class="shot"><div class="s-check"><input type="checkbox" data-shot="35" aria-label="Cảnh 35"></div>
+        <div class="s-tc"><b>00:28.4</b><span>1.2s</span></div>
+        <div class="s-main"><div class="s-id">CẢNH 35</div>
+          <p class="s-desc">Tách ra vòng cung quanh cặp đôi đang đánh, kết bằng vọt lên cao lộ ra <b>hai sân liền nhau</b>.</p>
+          <div class="chips"><span class="chip fpv">FPV #2b</span><span class="chip k">Cinewhoop</span><span class="chip sfx">Whoosh + nhạc lên</span></div></div></div>
+
+      <div class="shot"><div class="s-check"><input type="checkbox" data-shot="36" aria-label="Cảnh 36"></div>
+        <div class="s-tc"><b>00:29.6</b><span>0.8s</span></div>
+        <div class="s-main"><div class="s-id">CẢNH 36</div>
+          <p class="s-desc">CU tay hô tỉ số / bảng ghi điểm. Chi tiết nhỏ nhưng nói với người xem rằng đây là chỗ chơi thật, không phải chỗ chụp ảnh.</p>
+          <div class="chips"><span class="chip k">85mm</span><span class="chip k">Tĩnh</span><span class="chip k">25 fps</span><span class="chip sfx">Tiếng hô số</span></div></div></div>
+
+      <div class="shot"><div class="s-check"><input type="checkbox" data-shot="37" aria-label="Cảnh 37"></div>
+        <div class="s-tc"><b>00:30.4</b><span>1.2s</span></div>
+        <div class="s-main"><div class="s-id">CẢNH 37</div>
+          <p class="s-desc">WIDE khu chờ: nhóm bạn ngồi ghế, uống nước, cười, chờ tới lượt. <b>Bán không khí cộng đồng</b> — thứ giữ khách quay lại.</p>
+          <div class="chips"><span class="chip k">35mm</span><span class="chip k">Slider chậm</span><span class="chip k">25 fps</span><span class="chip sfx">Tiếng nói chuyện</span></div></div></div>
+
+      <div class="shot"><div class="s-check"><input type="checkbox" data-shot="38" aria-label="Cảnh 38"></div>
+        <div class="s-tc"><b>00:31.6</b><span>0.7s</span></div>
+        <div class="s-main"><div class="s-id">CẢNH 38</div>
+          <p class="s-desc">ECU chai nước / khăn <b>có logo sân</b> đặt trên ghế. Cảnh brand duy nhất được cài trong phần thân.</p>
+          <div class="chips"><span class="chip k">100mm</span><span class="chip k">Tĩnh</span><span class="chip k">50 fps</span></div></div></div>
+
+      <div class="shot" data-vert="1"><div class="s-check"><input type="checkbox" data-shot="39" aria-label="Cảnh 39"></div>
+        <div class="s-tc"><b>00:32.3</b><span>0.9s</span></div>
+        <div class="s-main"><div class="s-id">CẢNH 39 · CHUYỂN NGÀY → ĐÊM</div>
+          <p class="s-desc">WIDE cùng một khung sân ngoài trời, <b>cắt thẳng</b> từ hoàng hôn sang đèn đã bật. Quay hai lần ở đúng một vị trí chân máy, cách nhau 1 tiếng. Đây là cách nói "sân mở tới tối" mà không cần chữ.</p>
+          <div class="chips"><span class="chip hero">Cảnh dấu ấn</span><span class="chip k">24mm — đánh dấu chân máy</span><span class="chip k">Tĩnh</span><span class="chip k">25 fps</span><span class="chip sfx">Impact + đèn nổ</span><span class="chip vert">Bản dọc</span></div></div></div>
+
+      <div class="shot"><div class="s-check"><input type="checkbox" data-shot="40" aria-label="Cảnh 40"></div>
+        <div class="s-tc"><b>00:33.2</b><span>1.0s</span></div>
+        <div class="s-main"><div class="s-id">CẢNH 40</div>
+          <p class="s-desc">CU đèn pha sáng rực, thiêu thân bay qua chùm sáng. Chi tiết nhỏ này làm cảnh đêm có hồn.</p>
+          <div class="chips"><span class="chip k">85mm</span><span class="chip k">Tĩnh</span><span class="chip k">50 fps</span><span class="chip sfx">Hum đèn</span></div></div></div>
+
+      <div class="shot"><div class="s-check"><input type="checkbox" data-shot="41" aria-label="Cảnh 41"></div>
+        <div class="s-tc"><b>00:34.2</b><span>1.4s</span></div>
+        <div class="s-main"><div class="s-id">CẢNH 41</div>
+          <p class="s-desc">WIDE sân đêm nhìn từ ngoài hàng rào, đèn hắt qua lưới B40, người chơi thành bóng.</p>
+          <div class="chips"><span class="chip k">35mm</span><span class="chip k">Tĩnh</span><span class="chip k">25 fps</span></div></div></div>
+
+      <div class="shot"><div class="s-check"><input type="checkbox" data-shot="42" aria-label="Cảnh 42"></div>
+        <div class="s-tc"><b>00:35.6</b><span>0.9s</span></div>
+        <div class="s-main"><div class="s-id">CẢNH 42</div>
+          <p class="s-desc">Cú đánh ban đêm, low-angle, đèn sau lưng bung flare.</p>
+          <div class="chips"><span class="chip k">24mm sát đất</span><span class="chip k">Tĩnh</span><span class="chip k">120 fps</span><span class="chip sfx">PỐC</span></div></div></div>
+
+      <div class="shot"><div class="s-check"><input type="checkbox" data-shot="43" aria-label="Cảnh 43"></div>
+        <div class="s-tc"><b>00:36.5</b><span>0.8s</span></div>
+        <div class="s-main"><div class="s-id">CẢNH 43</div>
+          <p class="s-desc">CU giày dừng gấp, để lại vệt trên mặt sân.</p>
+          <div class="chips"><span class="chip k">50mm sát đất</span><span class="chip k">Tĩnh</span><span class="chip k">120 fps</span><span class="chip sfx">Rít giày</span></div></div></div>
+
+      <div class="shot"><div class="s-check"><input type="checkbox" data-shot="44" aria-label="Cảnh 44"></div>
+        <div class="s-tc"><b>00:37.3</b><span>0.7s</span></div>
+        <div class="s-main"><div class="s-id">CẢNH 44</div>
+          <p class="s-desc"><b>Xuyên lưới</b> — máy đặt sát sau lưới, lấy nét xuyên qua mắt lưới vào người chơi. Lưới trở thành lớp mờ ở tiền cảnh.</p>
+          <div class="chips"><span class="chip k">85mm sát lưới</span><span class="chip k">Tĩnh</span><span class="chip k">50 fps</span></div></div></div>
+
+      <div class="shot" data-vert="1"><div class="s-check"><input type="checkbox" data-shot="45" aria-label="Cảnh 45"></div>
+        <div class="s-tc"><b>00:38.0</b><span>3.0s</span></div>
+        <div class="s-main"><div class="s-id">CẢNH 45 · CÚ BÁN HÀNG</div>
+          <p class="s-desc">Bay từ <b>trong sân có mái</b>, xuyên qua khoảng hở ra <b>sân ngoài trời</b>, vọt lên cao thấy toàn khu đèn sáng. <b>Một take, không cắt.</b> Cảnh dài nhất video — và là cảnh duy nhất chứng minh "có cả sân trong lẫn ngoài" mà không cần nói.</p>
+          <div class="chips"><span class="chip hero">Cảnh quan trọng nhất</span><span class="chip fpv">FPV #3</span><span class="chip k">Cinewhoop</span><span class="chip k">Chạng vạng</span><span class="chip sfx">Whoosh dài + cao trào</span><span class="chip vert">Bản dọc</span></div></div></div>
+
+      <div class="shot"><div class="s-check"><input type="checkbox" data-shot="46" aria-label="Cảnh 46"></div>
+        <div class="s-tc"><b>00:41.0</b><span>1.0s</span></div>
+        <div class="s-main"><div class="s-id">CẢNH 46</div>
+          <p class="s-desc">Pha bóng quyết định, cận paddle và bóng chạm nhau, bóng biến dạng.</p>
+          <div class="chips"><span class="chip k">100mm</span><span class="chip k">Tĩnh</span><span class="chip k">120 fps</span><span class="chip sfx">PỐC + impact</span></div></div></div>
+
+      <div class="shot"><div class="s-check"><input type="checkbox" data-shot="47" aria-label="Cảnh 47"></div>
+        <div class="s-tc"><b>00:42.0</b><span>1.0s</span></div>
+        <div class="s-main"><div class="s-id">CẢNH 47</div>
+          <p class="s-desc">CU mặt ăn mừng, hai tay giơ lên.</p>
+          <div class="chips"><span class="chip k">85mm</span><span class="chip k">Tĩnh</span><span class="chip k">50 fps</span><span class="chip sfx">Hò reo</span></div></div></div>
+
+      <div class="shot" data-vert="1"><div class="s-check"><input type="checkbox" data-shot="48" aria-label="Cảnh 48"></div>
+        <div class="s-tc"><b>00:43.0</b><span>1.5s</span></div>
+        <div class="s-main"><div class="s-id">CẢNH 48</div>
+          <p class="s-desc">WIDE toàn bộ khu sân về đêm, nhiều sân đông người, đèn sáng trưng.</p>
+          <div class="chips"><span class="chip k">24mm</span><span class="chip k">Tĩnh</span><span class="chip k">25 fps</span><span class="chip sfx">Ambience đông người</span><span class="chip vert">Bản dọc</span></div></div></div>
+
+      <div class="shot" data-vert="1"><div class="s-check"><input type="checkbox" data-shot="49" aria-label="Cảnh 49"></div>
+        <div class="s-tc"><b>00:44.5</b><span>1.5s</span></div>
+        <div class="s-main"><div class="s-id">CẢNH 49</div>
+          <p class="s-desc"><b>Drone Mini kéo lùi và lên cao</b> — từ một sân lộ dần ra cả khu: số sân, bãi xe, biển tên. Cảnh trả lời câu hỏi "chỗ này to cỡ nào".</p>
+          <div class="chips"><span class="chip hero">Cảnh dấu ấn</span><span class="chip k">Drone Mini</span><span class="chip k">Kéo lùi + lên</span><span class="chip k">25 fps</span><span class="chip vert">Bản dọc</span></div></div></div>
+    </div>
+  </div>
+
+  <!-- HỒI 4 -->
+  <div class="act" style="--ac:var(--a4)">
+    <div class="act-head">
+      <span class="act-num">Hồi 4</span>
+      <span class="act-name">Kết</span>
+      <span class="act-tc">00:46 → 00:50 · 4s</span>
+      <span class="act-role">Kết bằng <b>con người</b>, không phải bằng cú thắng điểm. Nhạc tail, không có drop thứ hai.</span>
+    </div>
+    <div class="shots">
+
+      <div class="shot"><div class="s-check"><input type="checkbox" data-shot="50" aria-label="Cảnh 50"></div>
+        <div class="s-tc"><b>00:46.0</b><span>1.2s</span></div>
+        <div class="s-main"><div class="s-id">CẢNH 50</div>
+          <p class="s-desc">CU bốn người chạm paddle qua lưới — nghi thức kết thúc trận của pickleball. Dùng chính nghi thức của môn thay vì cái bắt tay chung chung.</p>
+          <div class="chips"><span class="chip hero">Cảnh dấu ấn</span><span class="chip k">50mm</span><span class="chip k">Handheld</span><span class="chip k">100 fps</span><span class="chip sfx">Paddle chạm + cười</span></div></div></div>
+
+      <div class="shot"><div class="s-check"><input type="checkbox" data-shot="51" aria-label="Cảnh 51"></div>
+        <div class="s-tc"><b>00:47.2</b><span>1.3s</span></div>
+        <div class="s-main"><div class="s-id">CẢNH 51</div>
+          <p class="s-desc">ECU bóng nằm im trên mặt sân — <b>đúng khung của cảnh 02</b>, nhưng giờ là ban đêm và sân đã có dấu giày. Đóng vòng tròn.</p>
+          <div class="chips"><span class="chip k">100mm macro</span><span class="chip k">Tĩnh</span><span class="chip k">50 fps</span><span class="chip sfx">Nhạc tail</span></div></div></div>
+
+      <div class="shot"><div class="s-check"><input type="checkbox" data-shot="52" aria-label="Cảnh 52"></div>
+        <div class="s-tc"><b>00:48.5</b><span>1.5s</span></div>
+        <div class="s-main"><div class="s-id">CẢNH 52</div>
+          <p class="s-desc">Đèn sân tắt lần lượt, fade to black.</p>
+          <div class="chips"><span class="chip k">Hậu kỳ / quay thật</span><span class="chip sfx">Reverb tail</span></div></div></div>
+    </div>
+  </div>
+
+  <!-- HỒI 5 -->
+  <div class="act" style="--ac:var(--a5)">
+    <div class="act-head">
+      <span class="act-num">Hồi 5</span>
+      <span class="act-name">Endcard</span>
+      <span class="act-tc">00:50 → 00:58 · 8s</span>
+      <span class="act-role"><b>Module tách rời.</b> Dựng thành file riêng để sau này đổi ưu đãi mà không phải render lại toàn bộ video.</span>
+    </div>
+    <div class="shots">
+
+      <div class="shot" data-vert="1"><div class="s-check"><input type="checkbox" data-shot="53" aria-label="Cảnh 53"></div>
+        <div class="s-tc"><b>00:50.0</b><span>2.0s</span></div>
+        <div class="s-main"><div class="s-id">CẢNH 53</div>
+          <p class="s-desc">Logo sân trên nền đen, hiện chậm.</p>
+          <div class="chips"><span class="chip k">Motion graphic</span><span class="chip vert">Bản dọc</span></div></div></div>
+
+      <div class="shot" data-vert="1"><div class="s-check"><input type="checkbox" data-shot="54" aria-label="Cảnh 54"></div>
+        <div class="s-tc"><b>00:52.0</b><span>3.0s</span></div>
+        <div class="s-main"><div class="s-id">CẢNH 54</div>
+          <p class="s-desc">Thẻ ưu đãi khai trương. Chữ nhỏ, letter-spacing rộng, tối đa <b>2 dòng</b> — nhồi nhiều là mất chất của 50 giây phía trước.</p>
+          <div class="chips"><span class="chip k">Motion graphic</span><span class="chip vert">Bản dọc</span></div></div></div>
+
+      <div class="shot" data-vert="1"><div class="s-check"><input type="checkbox" data-shot="55" aria-label="Cảnh 55"></div>
+        <div class="s-tc"><b>00:55.0</b><span>3.0s</span></div>
+        <div class="s-main"><div class="s-id">CẢNH 55</div>
+          <p class="s-desc">Địa chỉ + hotline + QR đặt sân. <b>Giữ đủ 3 giây</b> — dưới 3s người xem không kịp quét QR. Kết bằng một tiếng PỐC cuối cùng.</p>
+          <div class="chips"><span class="chip k">Motion graphic</span><span class="chip sfx">PỐC đóng video</span><span class="chip vert">Bản dọc</span></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FPV ================= -->
+<section class="panel" id="p-fpv" role="tabpanel" aria-labelledby="t-fpv" hidden>
+  <div class="stack-lg">
+    <div>
+      <h2 class="sec">Gửi thẳng cho pilot thuê ngoài</h2>
+      <div class="note"><strong>Tóm tắt đơn hàng:</strong> 1 buổi, 2 tiếng có mặt tại sân, 3 concept đường bay, tổng cộng cần <strong>7 giây dùng được</strong> trong bản dựng. Thiết bị đề xuất: cinewhoop <strong>có lồng bảo vệ</strong> (bắt buộc vì bay gần người), quay 4K 60fps, có ND filter. Chuẩn bị tối thiểu 12 pin. Nếu ngân sách chỉ đủ một cú — <strong>chọn concept 3</strong>.</div>
+    </div>
+
+    <article class="fpv-card">
+      <div class="fpv-title"><span class="n">Concept 01</span><h4>Xuyên sân</h4></div>
+      <div class="fpv-meta"><span class="chip">Dùng ở 00:18.9 → 00:20.6</span><span class="chip">Cần 1.7s dùng được</span><span class="chip">Tối thiểu 6 take</span><span class="chip">Quay được cả ban đêm</span></div>
+      <div class="pathline"><b>Đường bay</b>Xuất phát ngoài hàng rào cuối sân → hạ xuống độ cao khoảng 30cm → lướt thẳng theo tim sân với tốc độ chậm-vừa → <b style="display:inline;font-size:inherit;letter-spacing:0;text-transform:none;color:inherit">chui dưới lưới</b> → vọt lên 3m ngay sau lưới → yaw 180° nhìn ngược lại toàn sân.</div>
+      <div class="fpv-body">
+        <p><b>Mục đích:</b> đưa người xem xuống ngang tầm mặt sân, cảm nhận độ phẳng và chất liệu của sân mới.</p>
+        <p><b>Lưu ý:</b> mép dưới lưới pickleball cách mặt sân khoảng 86cm ở giữa — đủ cho cinewhoop nhỏ, nhưng phải bay thử không tải trước. Hai người chơi đứng hai bên, <b>không ai đứng trên đường bay</b>. Tốc độ đều, không giật — đây là cảnh sẽ bị làm chậm trong hậu kỳ.</p>
+      </div>
+    </article>
+
+    <article class="fpv-card">
+      <div class="fpv-title"><span class="n">Concept 02</span><h4>Vòng quanh trận đấu</h4></div>
+      <div class="fpv-meta"><span class="chip">Dùng ở 00:27.0 → 00:29.6</span><span class="chip">Cần 2.6s dùng được</span><span class="chip">Tối thiểu 6 take</span><span class="chip">Quay được cả ban đêm</span></div>
+      <div class="pathline"><b>Đường bay</b>Bám sau lưng một người chơi ở tầm vai khi họ di chuyển ngang sân → tách ra bay vòng cung quanh cặp đôi đang đánh → kết bằng vọt lên 6m để lộ ra hai sân nằm cạnh nhau.</div>
+      <div class="fpv-body">
+        <p><b>Mục đích:</b> chuyển từ "một trận đấu" sang "một khu nhiều sân" trong một chuyển động liền mạch.</p>
+        <p><b>Lưu ý:</b> giữ khoảng cách tối thiểu 2m với người. Người chơi được brief trước để đánh bình thường, không nhìn vào drone.</p>
+      </div>
+    </article>
+
+    <article class="fpv-card prime">
+      <div class="fpv-title"><span class="n">Concept 03 · ưu tiên tuyệt đối</span><h4>Trong ra ngoài</h4></div>
+      <div class="fpv-meta"><span class="chip">Dùng ở 00:38.0 → 00:41.0</span><span class="chip">Cần 3s liền, không cắt</span><span class="chip">Tối thiểu 10 take</span><span class="chip fpv">Chỉ quay được lúc chạng vạng</span></div>
+      <div class="pathline"><b>Đường bay</b>Xuất phát bên trong sân có mái, bay thấp giữa hai người đang đánh → tăng tốc về phía khoảng hở / cửa mở → <b style="display:inline;font-size:inherit;letter-spacing:0;text-transform:none;color:inherit">xuyên qua ra ngoài trời</b> → vọt lên 15m → tilt xuống thấy toàn khu đèn đã sáng.</div>
+      <div class="fpv-body">
+        <p><b>Vì sao đây là cảnh quan trọng nhất video:</b> nó chứng minh USP "có cả sân trong nhà lẫn sân ngoài trời — mưa nắng đều chơi được" trong <b>một take không cắt</b>. Không có cảnh nào khác nói được điều đó mà người xem tin.</p>
+        <p><b>Điều kiện bắt buộc:</b> khoảng hở tối thiểu 1,5m × 1,5m, đo trước và dọn sạch hai bên. Bay thử không tải ít nhất 3 lần trước khi quay thật.</p>
+        <p><b>Cửa sổ thời gian:</b> chạng vạng — khi <b>trong nhà đã bật đèn nhưng ngoài trời còn ánh trời</b>. Cửa sổ này chỉ khoảng 20 phút mỗi ngày. Phơi sáng phải khoá tay trước, không để máy tự đổi giữa take. Nếu hỏng cửa sổ hôm nay thì phải quay bù hôm khác — nên concept này chạy <b>đầu tiên</b> trong buổi FPV, không phải cuối.</p>
+      </div>
+    </article>
+
+    <div>
+      <h2 class="sec">An toàn — không thương lượng</h2>
+      <ul class="checklist">
+        <li>Cinewhoop <b>bắt buộc có lồng</b> cho mọi lần bay có người trong khung.</li>
+        <li>Dừng chơi hoàn toàn ở lần bay thử đầu của concept 1 và 3.</li>
+        <li>Có một <b>spotter</b> đứng ngoài đường bay, mắt luôn nhìn drone, quyền hô dừng.</li>
+        <li>Không bay qua đầu khách đang chơi ở các sân bên cạnh. Nếu khu đang mở cửa, khoanh vùng hoặc quay ngoài giờ.</li>
+        <li>Brief người chơi trước: đánh bình thường, không nhìn drone, không né đột ngột.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ================= AUDIO ================= -->
+<section class="panel" id="p-audio" role="tabpanel" aria-labelledby="t-audio" hidden>
+  <div class="stack-lg">
+    <div>
+      <h2 class="sec">Tài sản âm thanh số một</h2>
+      <div class="note"><strong>Tiếng "PỐC" của pickleball là thứ khác biệt lớn nhất mà môn này có.</strong> Nó giòn, ngắn, tần số cao, và ai cũng nhận ra ngay. Đừng lấy tiếng từ camera — <strong>thu riêng một buổi</strong> khi sân đã vắng, rồi đắp vào từng frame trong hậu kỳ. Video mở màn bằng tiếng này trên nền đen chính là vì thế.</div>
+    </div>
+
+    <div>
+      <h2 class="sec">Danh sách thu tiếng — 30 phút cuối buổi quay</h2>
+      <div class="tablewrap"><table>
+        <thead><tr><th>Tiếng</th><th>Cách thu</th><th>Số take</th><th>Dùng ở</th></tr></thead>
+        <tbody>
+          <tr><td><b>PỐC — dink nhẹ</b></td><td>Shotgun cách paddle 50cm, thu mono</td><td class="tc">10</td><td class="tc">27</td></tr>
+          <tr><td><b>PỐC — drive</b></td><td>Như trên</td><td class="tc">10</td><td class="tc">01, 22, 42, 55</td></tr>
+          <tr><td><b>PỐC — smash</b></td><td>Như trên, hạ gain tránh clip</td><td class="tc">10</td><td class="tc">29, 46</td></tr>
+          <tr><td>Bóng nảy trên mặt sân</td><td>Mic sát mặt sân</td><td class="tc">6</td><td class="tc">14g, 19</td></tr>
+          <tr><td>Bóng lăn dừng lại</td><td>Mic sát mặt sân</td><td class="tc">4</td><td class="tc">19, 51</td></tr>
+          <tr><td>Giày rít / dừng gấp</td><td>Người chơi thực hiện chậm, mic cách 1m</td><td class="tc">8</td><td class="tc">25, 43</td></tr>
+          <tr><td>Dây lưới rung</td><td>Búng tay vào lưới</td><td class="tc">4</td><td class="tc">06</td></tr>
+          <tr><td>Bóc film paddle</td><td>Mic sát 20cm</td><td class="tc">3</td><td class="tc">10</td></tr>
+          <tr><td>Khoá kéo túi, dây giày</td><td>Mic sát 20cm</td><td class="tc">4</td><td class="tc">09, 14b</td></tr>
+          <tr><td>Công tắc đèn / đèn nổ</td><td>Thu tại tủ điện</td><td class="tc">3</td><td class="tc">03, 07, 39</td></tr>
+          <tr><td>Ambience sân đông người</td><td>Thu stereo 2 phút liền mạch</td><td class="tc">1</td><td class="tc">37, 48</td></tr>
+        </tbody>
+      </table></div>
+    </div>
+
+    <div>
+      <h2 class="sec">Ba tầng mix</h2>
+      <div class="two">
+        <div class="note"><strong>Tầng 1 — Tiếng thật.</strong> PỐC, giày, thở, lưới. Ở hồi 0–2 các tiếng này được <strong>cô lập và phóng đại</strong>: mỗi tiếng đứng riêng trong khoảng lặng, có đuôi reverb dài mô phỏng không gian sân.</div>
+        <div class="note"><strong>Tầng 2 — Impact &amp; whoosh.</strong> Một cú impact trầm đặt ở mỗi điểm chuyển hồi (00:03, 00:18.4, 00:32.3). Whoosh quét cao tần bám theo ba cảnh FPV. Chức năng: che vết cắt và tạo lực đẩy.</div>
+        <div class="note"><strong>Tầng 3 — Sub bass nền.</strong> Một lớp rumble chạy suốt dưới 100Hz, giữ cho video "nặng" ngay cả khi nhạc thưa ở hồi 1–2.</div>
+        <div class="note"><strong>Nguyên tắc ducking.</strong> Hồi 0–2: nhạc lùi, tiếng thật lên trước. Từ 00:18.4: đảo ngược — nhạc lấn át, tiếng thật chỉ còn là gia vị, riêng PỐC vẫn được đẩy lên trên nhạc.</div>
+      </div>
+    </div>
+
+    <div>
+      <h2 class="sec">Yêu cầu bản nhạc</h2>
+      <div class="tablewrap"><table>
+        <thead><tr><th>Tiêu chí</th><th>Yêu cầu</th></tr></thead>
+        <tbody>
+          <tr><td>Tempo</td><td>105–115 BPM</td></tr>
+          <tr><td>Thể loại</td><td>Electronic percussive / hybrid, kick nặng, <b>không lời</b></td></tr>
+          <tr><td>Cấu trúc bắt buộc</td><td>Build ~12s → <b>breakdown thật ~5s</b> → drop ~28s → tail ~8s</td></tr>
+          <tr><td>Nguồn licence</td><td>Artlist / Epidemic Sound / Musicbed — mua trước khi dựng</td></tr>
+          <tr><td>Bẫy thường gặp</td><td>Chọn bản không có breakdown thật, editor phải tự cắt và nghe rất gượng. <b>Nghe kỹ đoạn giây 12–18 trước khi mua.</b></td></tr>
+        </tbody>
+      </table></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= VERTICAL ================= -->
+<section class="panel" id="p-vert" role="tabpanel" aria-labelledby="t-vert" hidden>
+  <div class="stack-lg">
+    <div>
+      <h2 class="sec">Bản dọc 20 giây · 9:16</h2>
+      <div class="note">Cắt lại từ <strong>cùng một bộ footage</strong>, không quay thêm buổi khác. Đây là bản sẽ chạy quảng cáo và ra đơn; bản 58s ngang là tài sản branding cho website, fanpage và màn hình tại sân. Quy tắc trên set: <strong>mọi cảnh có gắn thẻ "Bản dọc" phải đặt chủ thể trong 1/3 giữa khung</strong> khi quay ngang, để crop dọc không mất đầu.</div>
+    </div>
+    <div>
+      <div class="tablewrap"><table>
+        <thead><tr><th>TC dọc</th><th>Lấy từ cảnh</th><th>Vai trò</th></tr></thead>
+        <tbody>
+          <tr><td class="tc">00:00 – 00:03</td><td class="tc">29 → 22</td><td><b>Hook.</b> Cú smash low-angle + tiếng PỐC ngay frame đầu. Không title, không logo, không chào hỏi.</td></tr>
+          <tr><td class="tc">00:03 – 00:06</td><td class="tc">04, 05, 07, 10</td><td>Bốn macro liên tiếp: vạch, mặt sân, đèn, bóc film paddle. Thông điệp: <b>sân mới tinh</b>.</td></tr>
+          <tr><td class="tc">00:06 – 00:09</td><td class="tc">45</td><td>FPV "trong ra ngoài", crop giữa. Thông điệp: <b>có cả sân trong nhà lẫn ngoài trời</b>.</td></tr>
+          <tr><td class="tc">00:09 – 00:13</td><td class="tc">26, 32, 33, 39</td><td>Signature xuyên lỗ bóng + đập tay + cười + chuyển ngày sang đêm. Thông điệp: <b>vui và chơi được tới tối</b>.</td></tr>
+          <tr><td class="tc">00:13 – 00:16</td><td class="tc">48, 49</td><td>Toàn khu về đêm + drone kéo lùi. Thông điệp: <b>quy mô</b>.</td></tr>
+          <tr><td class="tc">00:16 – 00:20</td><td class="tc">53, 54, 55</td><td>Endcard: logo → ưu đãi → địa chỉ &amp; QR. QR giữ trọn 3 giây.</td></tr>
+        </tbody>
+      </table></div>
+    </div>
+    <div>
+      <h2 class="sec">Khác biệt so với bản ngang</h2>
+      <ul class="checklist">
+        <li>Nhịp cắt nhanh hơn khoảng 30% — cảnh dài nhất không quá 1,5 giây trừ cú FPV.</li>
+        <li><b>Không có nốt lặng.</b> Cấu trúc 5 giây im ở giữa chỉ hiệu quả khi người xem đã chủ động bấm play.</li>
+        <li>Nhạc dùng cùng bản nhưng bắt vào <b>ngay tại drop</b>, bỏ toàn bộ đoạn build.</li>
+        <li>Chữ trên màn: chỉ ở endcard. Không sub, không caption trên phần thân — hình đã tự nói.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SCHEDULE ================= -->
+<section class="panel" id="p-sched" role="tabpanel" aria-labelledby="t-sched" hidden>
+  <div class="stack-lg">
+    <div>
+      <h2 class="sec">Một ngày quay · thứ tự tối ưu theo ánh sáng</h2>
+      <div class="note">Nguyên tắc xếp lịch: <strong>quay ngược từ ánh sáng ra</strong>. Việc gì không phụ thuộc trời (macro, chi tiết, trong nhà) làm buổi chiều; việc gì chỉ có một cửa sổ duy nhất (chạng vạng, giờ vàng) được ưu tiên tuyệt đối và mọi thứ khác nhường chỗ.</div>
+    </div>
+    <div class="sched">
+      <div class="slot"><div class="t">14:00 – 14:30</div><div class="b"><strong>Set up &amp; dọn sân</strong><span>Lau mặt sân, căng lại lưới, dọn vật lạ khỏi khung, kiểm tra toàn bộ đèn còn sáng.</span></div></div>
+      <div class="slot"><div class="t">14:30 – 16:00</div><div class="b"><strong>Khối A — Chi tiết trong nhà</strong><span>Cảnh 04–14. Macro mặt sân, lưới, đèn, paddle, tiện ích, chuỗi bắn liên thanh. Ánh sáng ổn định, không phụ thuộc trời.</span></div></div>
+      <div class="slot"><div class="t">16:00 – 17:00</div><div class="b"><strong>Khối B — Người &amp; rally trong nhà</strong><span>Cảnh 03, 15–21, 25, 27, 28, 44. Toàn bộ hồi 2 và các cảnh cận trong nhà.</span></div></div>
+      <div class="slot"><div class="t">17:00 – 17:50</div><div class="b"><strong>Khối C — Ngoài trời giờ vàng</strong><span>Cảnh 08, 31, và bản <b>ngày</b> của cảnh 39. Đánh dấu vị trí chân máy cảnh 39 bằng băng dính để quay lại đúng khung lúc tối.</span></div></div>
+      <div class="slot key"><div class="t">17:50 – 18:25</div><div class="b"><strong>Khối D1 — FPV concept 3 · chạng vạng</strong><span>Cửa sổ duy nhất trong ngày. Pilot có mặt và bay thử từ 17:30. Mọi bộ phận khác dừng, nhường sân.</span></div></div>
+      <div class="slot"><div class="t">18:25 – 19:30</div><div class="b"><strong>Khối D2 — FPV concept 1 &amp; 2</strong><span>Hai concept này quay được dưới ánh đèn, không phụ thuộc trời.</span></div></div>
+      <div class="slot"><div class="t">19:30 – 20:40</div><div class="b"><strong>Khối E — Đêm</strong><span>Cảnh 22–24, 29, 32, 33, 36–38, 40–43, 46, 47, 50, 51, và bản <b>đêm</b> của cảnh 39.</span></div></div>
+      <div class="slot"><div class="t">20:40 – 21:10</div><div class="b"><strong>Khối F — Drone Mini</strong><span>Cảnh 16, 30, 48, 49. Top-down và kéo lùi toàn khu khi đèn đã sáng đủ.</span></div></div>
+      <div class="slot"><div class="t">21:10 – 21:40</div><div class="b"><strong>Khối G — Thu tiếng</strong><span>Sân đã vắng, không ồn. Toàn bộ danh sách ở tab Âm thanh.</span></div></div>
+    </div>
+    <div>
+      <h2 class="sec">Phương án dự phòng</h2>
+      <ul class="checklist">
+        <li><b>Mưa:</b> khối A và B vẫn chạy bình thường trong nhà. Khối C và concept 3 dời sang ngày khác — đừng cố quay, ánh sáng mưa làm mặt sân xỉn và hỏng cả phần bán hàng.</li>
+        <li><b>Hỏng cửa sổ chạng vạng:</b> đặt luôn lịch dự phòng với pilot trong 3 ngày kế tiếp ngay khi ký hợp đồng, rẻ hơn nhiều so với thuê lại từ đầu.</li>
+        <li><b>Người chơi đến muộn:</b> khối A không cần người, đẩy lên làm trước.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PREP ================= -->
+<section class="panel" id="p-prep" role="tabpanel" aria-labelledby="t-prep" hidden>
+  <div class="stack-lg">
+    <div class="fill">
+      <h4>Cần anh điền trước khi team bắt tay vào</h4>
+      <ul>
+        <li><code>[TÊN SÂN]</code> — tên hiển thị trong title cảnh 03 và endcard</li>
+        <li><code>[LOGO]</code> — file vector, bản sáng dùng trên nền đen</li>
+        <li><code>[ƯU ĐÃI KHAI TRƯƠNG]</code> — tối đa 2 dòng cho cảnh 54</li>
+        <li><code>[ĐỊA CHỈ + HOTLINE + QR ĐẶT SÂN]</code> — cảnh 55</li>
+        <li><code>[SỐ SÂN]</code> — bao nhiêu sân trong nhà, bao nhiêu ngoài trời (quyết định cách dàn cảnh 48 và 49)</li>
+        <li><code>[GIỜ MỞ CỬA]</code> — nếu mở tới khuya thì đẩy mạnh hơn phần cảnh đêm</li>
+      </ul>
+    </div>
+
+    <div>
+      <h2 class="sec">Nhân sự trước ống kính</h2>
+      <ul class="checklist">
+        <li><b>4 người chơi chính</b> — 2 nam 2 nữ, 20–35 tuổi, biết chơi thật. Người không biết chơi lộ ra ngay ở cảnh slow-mo.</li>
+        <li><b>1 gương mặt chính</b> cho các cảnh cận (18, 28, 33, 47) — chọn người có thần thái, không cần chơi giỏi nhất.</li>
+        <li><b>1 nhóm phụ 4–6 người</b> cho cảnh khu chờ (37) và cảnh toàn khu đêm (48). Nên có một cặp trung niên hoặc một gia đình để mở rộng tệp khách — pickleball bán được cho cả hai nhóm tuổi, đừng chỉ quay người trẻ.</li>
+      </ul>
+    </div>
+
+    <div>
+      <h2 class="sec">Trang phục</h2>
+      <ul class="checklist">
+        <li>Tránh <b>trắng thuần</b> — cháy dưới đèn sân và ngược sáng giờ vàng.</li>
+        <li>Tránh logo hãng khác trên áo.</li>
+        <li>Chọn tông tối hoặc trung tính, mỗi người một điểm nhấn màu ăn với mặt sân. Không mặc trùng màu mặt sân, người sẽ chìm.</li>
+        <li>Mỗi người chuẩn bị <b>2 set</b> để các cảnh chiều và tối trông như hai buổi khác nhau.</li>
+      </ul>
+    </div>
+
+    <div>
+      <h2 class="sec">Đạo cụ</h2>
+      <ul class="checklist">
+        <li><b>4 paddle mới còn nguyên film</b> — cảnh 10 phụ thuộc hoàn toàn vào cái film này.</li>
+        <li><b>6 bóng mới</b>. Bóng cũ xỉn màu và trông rất tệ dưới macro. Bóng dùng quay xong đừng đánh tiếp.</li>
+        <li>Túi đựng vợt sạch, khăn và chai nước <b>có logo sân</b> cho cảnh 38.</li>
+        <li>Biển tên sân / bảng số sân lau sạch cho cảnh 13.</li>
+        <li>Băng dính giấy đánh dấu vị trí chân máy cảnh 39.</li>
+      </ul>
+    </div>
+
+    <div>
+      <h2 class="sec">Dọn hiện trường — làm trước khi bấm máy đầu tiên</h2>
+      <ul class="checklist">
+        <li>Lau sạch mặt sân, đặc biệt vùng sẽ quay macro.</li>
+        <li>Căng lại lưới cho thẳng, chỉnh khoá tăng đơ.</li>
+        <li>Dọn khỏi khung: thùng rác, dây điện, chổi, biển quảng cáo của hãng khác, xe máy đỗ trong nền.</li>
+        <li>Kiểm tra <b>toàn bộ</b> bóng đèn còn sáng. Một bóng chết trong cảnh wide đêm là hỏng cả cảnh, và không sửa được ở hậu kỳ.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ================= NOTES ================= -->
+<section class="panel" id="p-notes" role="tabpanel" aria-labelledby="t-notes" hidden>
+  <div class="stack-lg">
+    <div>
+      <h2 class="sec">Thông số quay</h2>
+      <div class="tablewrap"><table>
+        <thead><tr><th>Hạng mục</th><th>Cài đặt</th><th>Lý do</th></tr></thead>
+        <tbody>
+          <tr><td>Độ phân giải</td><td>4K, quay <b>full khung</b></td><td>Crop 2.39:1 ở hậu kỳ, còn dư đất để crop bản dọc 9:16 từ cùng file.</td></tr>
+          <tr><td>Tốc độ khung</td><td>25p cho real-time; 100–120 fps cho slow-mo</td><td>Đã ghi rõ fps cho từng cảnh trong tab Timeline.</td></tr>
+          <tr><td>Shutter</td><td>180° — 1/50 ở 25p, 1/200 ở 100 fps</td><td>Giữ motion blur tự nhiên. Đây là thứ tách "video quay bằng máy ảnh" khỏi "video điện thoại".</td></tr>
+          <tr><td>Profile</td><td>S-Log3 hoặc S-Cinetone</td><td>Nếu team chưa quen grade Log thì dùng S-Cinetone, an toàn hơn và vẫn đẹp.</td></tr>
+          <tr><td>ND filter</td><td>Bắt buộc cho toàn bộ khối ngoài trời</td><td>Không có ND thì phải khép khẩu, mất bokeh và mặt sân trông phẳng.</td></tr>
+          <tr><td>Flicker đèn LED</td><td>Test shutter trước khi quay trong nhà</td><td>Đèn LED giá rẻ hay nhấp nháy ở tốc độ cao. Quay thử 3 giây ở 120 fps và xem lại <b>trước</b> khi cả team vào việc.</td></tr>
+          <tr><td>Cân bằng trắng</td><td>Khoá tay, ghi lại số Kelvin từng khối</td><td>Cảnh 39 cắt thẳng ngày sang đêm — hai bản phải cùng gốc màu.</td></tr>
+        </tbody>
+      </table></div>
+    </div>
+
+    <div>
+      <h2 class="sec">Định hướng màu</h2>
+      <div class="two">
+        <div class="note"><strong>Trục màu chính.</strong> Xanh của mặt sân đối lại cam của đèn, hoàng hôn và da người. Cặp màu này có sẵn trong bối cảnh — việc của grade là đẩy mạnh nó, không phải bịa ra.</div>
+        <div class="note"><strong>Dìm bóng tối sâu.</strong> Không cào sáng vùng tối. Giữ đèn sân làm điểm sáng, cho phép cháy nhẹ. Đây là thứ tạo chiều sâu ở các cảnh đêm.</div>
+        <div class="note"><strong>Một ngoại lệ tuyệt đối:</strong> màu mặt sân phải giữ đúng màu thật. Đây là sản phẩm đang bán — khách đến nơi thấy sân khác màu trong video là mất niềm tin ngay.</div>
+        <div class="note"><strong>Nhất quán hai khối.</strong> Khối ngày và khối đêm phải cùng một gốc grade, chỉ khác nhiệt độ. Nếu để lệch, cảnh 39 sẽ trông như hai video ghép.</div>
+      </div>
+    </div>
+
+    <div>
+      <h2 class="sec">Ba điều em phản biện lại chính kịch bản này</h2>
+      <ul class="checklist">
+        <li><b>58 giây là dài cho một sân thể thao địa phương.</b> Bản ngang này là tài sản branding — dùng cho website, màn hình tại sân, gửi đối tác, chạy trước đối tượng đã biết đến sân. Đừng kỳ vọng nó chạy ads lạnh hiệu quả. Cái ra đơn là bản dọc 20 giây.</li>
+        <li><b>Sân chỉ đẹp nhất trong hai tuần đầu.</b> Vạch mờ, mặt sân bám bụi, lưới chùng — tất cả đều thấy rõ dưới macro. Quay càng sớm sau khi hoàn thiện càng tốt. Nếu phải chọn giữa "quay sớm với ê-kíp gọn" và "quay muộn với ê-kíp đầy đủ", chọn quay sớm.</li>
+        <li><b>Cảnh 45 là điểm rủi ro duy nhất của cả dự án.</b> Nó phụ thuộc vào một cửa sổ 20 phút, một pilot thuê ngoài, và một khoảng hở vật lý phải đo trước. Nếu hỏng, video vẫn dùng được nhưng mất đúng cái cảnh bán hàng mạnh nhất. Đặt lịch dự phòng ngay từ đầu, đừng đợi hỏng rồi mới tính.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span>Kịch bản quay · bản 1.0 · 55 cảnh · 58 giây</span>
+  <span class="mono">Tiến độ tick được lưu trên trình duyệt này</span>
+</footer>
+
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ---------- tabs ---------- */
+  var tabs = Array.prototype.slice.call(document.querySelectorAll('nav.tabs button'));
+  function selectTab(btn){
+    tabs.forEach(function(t){
+      var on = t === btn;
+      t.setAttribute('aria-selected', on ? 'true' : 'false');
+      var p = document.getElementById(t.getAttribute('aria-controls'));
+      if (p) p.hidden = !on;
+    });
+    window.scrollTo({top:0, behavior:'auto'});
+  }
+  tabs.forEach(function(t){
+    t.addEventListener('click', function(){ selectTab(t); });
+    t.addEventListener('keydown', function(e){
+      var i = tabs.indexOf(t);
+      if (e.key === 'ArrowRight'){ e.preventDefault(); tabs[(i+1)%tabs.length].focus(); }
+      if (e.key === 'ArrowLeft'){ e.preventDefault(); tabs[(i-1+tabs.length)%tabs.length].focus(); }
+    });
+  });
+
+  /* ---------- vertical-only filter ---------- */
+  var onlyVert = document.getElementById('onlyvert');
+  onlyVert.addEventListener('change', function(){
+    var v = onlyVert.checked;
+    document.querySelectorAll('#p-timeline .shot').forEach(function(s){
+      s.hidden = v && s.dataset.vert !== '1';
+    });
+    document.querySelectorAll('#p-timeline .act').forEach(function(a){
+      var any = Array.prototype.some.call(a.querySelectorAll('.shot'), function(s){ return !s.hidden; });
+      a.hidden = !any;
+    });
+  });
+
+  /* ---------- shot check-off ---------- */
+  var TOTAL = 55;
+  var LS_KEY = 'pkb-shot-checks-v1';
+  var checks = {};
+  var docRef = null;
+  var applying = false;
+
+  try { checks = JSON.parse(localStorage.getItem(LS_KEY) || '{}') || {}; } catch(e){ checks = {}; }
+
+  var boxes = Array.prototype.slice.call(document.querySelectorAll('[data-shot]'));
+  var pdone = document.getElementById('pdone');
+  var pfill = document.getElementById('pfill');
+
+  function paint(){
+    var n = 0;
+    boxes.forEach(function(cb){
+      var on = !!checks[cb.dataset.shot];
+      cb.checked = on;
+      cb.closest('.shot').classList.toggle('done', on);
+      if (on) n++;
+    });
+    pdone.textContent = n;
+    pfill.style.width = (n / TOTAL * 100) + '%';
+  }
+
+  function saveLocal(){
+    try { localStorage.setItem(LS_KEY, JSON.stringify(checks)); } catch(e){}
+  }
+
+  boxes.forEach(function(cb){
+    cb.addEventListener('change', function(){
+      if (applying) return;
+      if (cb.checked) checks[cb.dataset.shot] = true;
+      else delete checks[cb.dataset.shot];
+      paint();
+      saveLocal();
+      if (docRef) { try { docRef.set({ checks: checks }); } catch(e){} }
+    });
+  });
+
+  paint();
+
+  /* shared state across the team, when the runtime offers it */
+  (function connect(){
+    if (!window.claude || typeof window.claude.use !== 'function') return;
+    window.claude.use('db').then(function(db){
+      if (!db) return;
+      try { docRef = db.doc('crew/shotchecks'); } catch(e){ return; }
+
+      function absorb(data){
+        if (!data || typeof data.checks !== 'object' || !data.checks) return;
+        applying = true;
+        checks = Object.assign({}, data.checks);
+        paint();
+        saveLocal();
+        applying = false;
+      }
+
+      docRef.get().then(function(snap){
+        if (snap && snap.exists) absorb(snap.data());
+        else if (Object.keys(checks).length) { try { docRef.set({ checks: checks }); } catch(e){} }
+      }).catch(function(){});
+
+      try {
+        docRef.onSnapshot(function(snap){
+          if (snap && snap.exists) absorb(snap.data());
+        }, function(){});
+      } catch(e){}
+    }).catch(function(){});
+  })();
+})();
+</script>
+
+</body>
+</html>
